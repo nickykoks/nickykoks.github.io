@@ -1,0 +1,336 @@
+*{box-sizing: border-box;}
+html {
+	scroll-behavior: smooth;
+	cursor: url("sword.png"), pointer;
+}
+body{
+	overflow: hidden;
+	padding: 0px;
+	margin: 0px;
+	font-family: 'Oswald', sans-serif;
+	font-size: 21px;
+	background-repeat: no-repeat;
+}
+h1, p, h3, h2 {padding: 0; margin: 0; font-weight: normal;}
+/*h1 {font-family: 'Great Vibes', cursive;}*/
+a {text-decoration: none; cursor: url("hand.png"), pointer;}
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+.wrapper {width: 1200px; margin: 0 auto;}
+
+#header{
+	background: black;
+	width: 100%;
+	border-bottom: 2px solid #308d8c;
+	position: absolute;
+	top: 0;
+	z-index: 1000;
+	display: grid;
+	grid-template-columns: 2fr 6fr 2fr;
+	filter: drop-shadow(0 0 8px #0f605e);
+	
+}
+#logo{
+	position: fixed;
+}
+nav{
+	margin: 0 auto;
+	width: 1200px;
+	position: relative;
+	user-select: none;
+}
+nav ul{
+	color: red;
+	padding: 0px;
+	margin: 0px;
+	position: absolute;
+	right: 0;
+	/*top: 3px; AKO NE RADI LEPO HEIGHT NA NAVIGACIJI POSLE PROMENE LOGOA GLEDAJ OVDE*/
+}
+nav ul li{
+	list-style: none;
+	display: inline-block;
+	height: 52px;
+	line-height: 52px;
+	margin-right: 20px;
+}
+nav ul li:hover{
+	border-bottom: 2px solid #f3b51e;
+	/*filter: drop-shadow(0 0 0 #0f605e);*/
+}
+nav ul li:last-child{margin-right: 0px;}
+nav ul li a{
+	color: #308d8c;
+	text-decoration: none;
+	display: inline-block;
+	transition: 0.4s;
+}
+nav ul li a:hover{
+	text-decoration: none;
+	color: #f3b51e;
+	transition: 0.4s;
+}
+.dropDownList {
+	width: 160px;
+	display: none;
+}
+.dropDownList li{
+	border-bottom: 1px solid #0f605e;
+	filter: drop-shadow: (4px 4px 5px rgba(0, 0, 0, 0.5));
+	margin: 0;
+	text-align: left;
+	width: 160px;
+	background: black;
+}
+.dropDownList li:hover{border-bottom: 1px solid #f3b51e;}
+.dropDownList li a{
+	
+	margin-left: 10px;
+	display: block;
+}
+
+#social-icons{
+	float: left;
+	height: 52px;
+}
+#social-icons img{
+	width: 22px;
+	position: absolute;
+	top: 15px;
+}
+#social-icons #insta{
+	right: 10px;
+}
+#social-icons #fb{
+	right: 42px;
+}
+.shadow {
+	color: #0f605e;
+	filter: drop-shadow(0 0 10px #0f605e);
+	}
+.light {
+	color: #f3b51e;
+	filter: drop-shadow(0 0 10px #f3b51e);
+	}
+.blackScreenStart {
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background: black;
+	z-index: 5;
+}
+#backgroundImg {
+	background-image: url('startPageImg/background.jpg');
+	background-repeat: no-repeat;
+	background-position: center;
+    background-attachment: fixed;
+	background-size: cover;
+	position: absolute; /*fixed*/
+	overflow: hidden;
+	top: 50.25px;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	transform: scale(1.15);
+}
+
+#mainPage{
+	position: absolute; /*fixed*/
+	top: 50.25px;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	color: #eee;
+	text-align: center; 
+	font-family: 'Crimson Text', serif;
+	user-select: none;
+}
+#mainPageText{
+	color: #fff;
+	position: absolute;
+	left: 50%;
+	margin-left: -383px;
+	top: 23%;
+	text-align: center;
+}
+#mainPageTextClicked{
+	color: #fff;
+	position: absolute;
+	left: 50%;
+	margin-left: -383px;
+	margin-top: -240px;
+	text-align: center;
+	top: -1111px;
+	transition: ease-in 1.8s;
+}
+
+.welcome {font-size: 62px;}
+.lineUp {font-size: 53px;}
+.lineUp span {font-size: 37px;}
+.lineDown {font-size: 51px;}
+.lineDown span {font-size: 34px;}
+.diveInBtn{
+	opacity: 0.8;
+	font-size: 40px;
+	border: 3px solid rgba(255, 165, 0, 0.8);
+	background: rgba(230, 230, 230, 0.3);
+	cursor: url("hand.png"), pointer;
+	padding: 10px 60px;
+	display: inline-block;
+	margin-top: 200px;
+	position: absolute;
+	left: 50%;
+	margin-left: -134px;
+	bottom: 20%;
+	transition: 0.6s;
+	user-select: none;
+}
+.diveInBtn:hover{
+	opacity: 1;
+	background: rgba(230, 230, 230, 0.5);
+	color: rgba(255, 165, 0, 0.9);
+	transition: 0.6s;
+}
+#sliderWrapper {
+	text-align: center;
+	position: relative;
+	margin-top: 80px;
+	display: none;
+}
+#sliderWrapper h1 {
+	margin-bottom: 30px;
+	font-size: 62px;
+}
+#slides {
+	width: 100%;
+	margin: 0 auto;
+	
+}
+#mainSlide {
+	filter: grayscale(0);
+}
+#mainSlide:hover {filter: saturate(1.5);}
+.slidesBackground {background: rgba(0, 0, 0, 0.5);}
+.slides {
+	border: 2px solid black;
+	width: 200px;
+	height: 310px;
+	display: inline-block;
+	box-sizing: content-box;
+	margin: 40px;
+	transition: 0.4s;
+	box-shadow: 0 0 10px 5px #0f605e;
+	user-select: none;
+	padding: 5px;
+	filter: grayscale(90%);
+	cursor: url("hand.png"), pointer;
+}
+.slides:hover {
+	transform: scale(1.05);
+	transition: 0.4s;
+	filter: drop-shadow(0 0 15px #f3b51e);
+	box-shadow: 0 0 6px 4px #f3b51e;
+	filter: saturate(1.5);
+}
+#slides div {
+	/* border: 3px solid rgba(255, 165, 0, 0.8); */
+	display: inline-block;
+}
+.slideArrows {
+	height: 70px;
+	display: inline-block;
+	position: absolute;
+	bottom: 46%;
+	box-shadow: 0 0 4px 4px #0f605e;
+	z-index: 555;
+	cursor: url("hand.png"), pointer;
+	border-radius: 50%;
+	transition: 0.3s;
+}
+.slideArrows:hover {
+	background: #f3b51e;
+	box-shadow: 0 0 4px 4px #f3b51e;
+	transition: 0.2s;
+}
+#arrowLeft {left: 20%;}
+#arrowRight {right: 20%;}
+
+
+
+.diveInBtn{
+	opacity: 0.8;
+	font-size: 40px;
+	border: 3px solid rgba(255, 165, 0, 0.8);
+	background: rgba(230, 230, 230, 0.3);
+	cursor: url("hand.png"), pointer;
+	padding: 10px 60px;
+	display: inline-block;
+	margin-top: 200px;
+	position: absolute;
+	left: 50%;
+	margin-left: -134px;
+	bottom: 20%;
+	transition: 0.6s;
+	user-select: none;
+}
+.diveInBtn:hover{
+	opacity: 1;
+	background: rgba(230, 230, 230, 0.5);
+	color: rgba(255, 165, 0, 0.9);
+	transition: 0.6s;
+}
+#slideBanner {
+	width: 100%;
+	margin-top: 50px;
+	margin-bottom: 50px;
+}
+#bookNameField {
+	border: 3px solid rgba(255, 165, 0, 0.8);
+	background: rgba(230, 230, 230, 0.3);
+	width: 300px;
+	display: inline-block;
+	margin: 0 30px;
+	line-height: 75px;
+	height: 80px;
+	font-size: 40px;
+	transition: 0.6s;
+	/*box-shadow: 0 0 10px 5px #0f605e;*/
+	cursor: url("hand.png"), pointer;
+}
+#bookNameField:hover {
+	transition: 0.5s;
+	background: rgba(230, 230, 230, 0.5);
+	color: rgba(255, 165, 0, 0.9);
+}
+
+
+
+@media only screen and (max-width: 1625px) {
+}
+
+@media only screen and (max-width: 1399px) {
+nav{
+	width: 800px;
+}
+}
+
+@media only screen and (max-width: 1188px) {
+}
+
+
+@media only screen and (max-width: 1115px) {
+nav{
+	width: 600px;
+}
+}
+
+@media only screen and (max-width: 818px) {
+nav{
+	width: 500px;
+}
+}

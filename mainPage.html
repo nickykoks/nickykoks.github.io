@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link href="style.css" rel="stylesheet" type="text/css">
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width">
+		<link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Great+Vibes" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Crimson+Text" rel="stylesheet">
+		<link rel="icon" href="logo/logo1.png" type="image/png">
+		<title>Die Letzte Ritter</title>
+		
+	</head>
+	<body>
+		
+		<div id="header">
+			<div></div>
+			<nav>
+				<a><img id="logo" src="logo/milfara.png" alt="logo"></a>
+				<ul>
+					<li><a id="homePage" href="mainPage.html">Home</a></li>
+					<li id="storiesListWrap">
+						<a id="storiesList">Stories
+							<ul class="dropDownList storiesList">
+								<li><a id="arturList" href="arthurPage.html">Arthur</a></li>
+								<li><a id="parsifalList" href="parsifalPage.html">Parsifal</a></li>
+								<li><a id="ritterList" href="ritterPage.html">"Der Letzte Ritter"</a></li>
+							</ul>
+						</a>
+					</li>
+					<li><a id="contactPage" href="contact.html">Contact</a></li>
+				</ul>
+				
+			</nav>
+			<div id="social-icons">
+				<img id="fb" src="socialicons/fb.png">
+				<img id="insta" src="socialicons/insta.png">
+			</div>
+			<div></div>
+		</div>
+		<div class="blackScreenStart"></div>
+
+		<div id="backgroundImg"></div>
+		
+		<div id="mainPage">	
+			<div class="wrapper">
+				<div id="mainPageText">
+					<p class="welcome">WELCOME</p>
+					<p class="lineUp"><span>TO THE</span> MEDIEVAL KNIGHT <span>STORIES</span></p>
+					<p class="lineDown"><span>FROM</span> EUROPEAN <span>LORE</span></p>
+				</div>
+				<div class="diveInBtn">DIVE IN</div>
+			</div>
+			
+			<div id="sliderWrapper">
+				<h1>Choose Your Story:</h1>
+				
+				<div class="slidesBackground">
+					<img id="arrowLeft" align='middle' src="strelice/left.png" class="slideArrows">
+					<img id="arrowRight" align='middle' src="strelice/right.png" class="slideArrows">
+					<div id="slides">
+						<!-- bilo a umesto div -->
+						<div><img id="firstSlide" class="slides" src=""></div>
+						<div><img id="mainSlide" class="slides" src=""></div>
+						<div><img id="lastSlide" class="slides" src=""></div>
+					</div>
+				</div>
+				
+				<div id="slideBanner" class="">
+					<a><div id="bookNameField"><span>ARTHUR</span></div></a>
+				</div>
+			</div>
+		</div>
+	
+	<!--<script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>-->
+	
+	<script
+		src="http://code.jquery.com/jquery-2.2.4.js"
+		integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="
+		crossorigin="anonymous">
+	</script>
+	
+	<script src="script.js"></script>
+	<script src="contactscript.js"></script>	
+		
+		
+	
+	</body>
+</html>
